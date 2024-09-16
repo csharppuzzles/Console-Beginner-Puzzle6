@@ -1,4 +1,4 @@
-# C# Console Beginners Premium Puzzle 6
+# C# Console Beginners Puzzle 6
 
 ## While Loops
 
