@@ -1,6 +1,6 @@
-# C# Console Beginners Premium Puzzle 5
+# C# Console Beginners Premium Puzzle 6
 
-## Switches
+## While Loops
 
 ### View the YouTube Video: 
 
@@ -25,34 +25,35 @@ At the very bottom, I have listed the functions. Comment and uncomment them, to 
     // puzzleC()
 ```
 
-### A - Workout of the day
-Write a program that provides a fitness exercise for the user to do, depending on what day of the week it is. <br />
-Ask the user for the weekday. <br />
-    "What day is it?: " <br />
-Use a SWITCH statement to print out an exercise. The exercise should be different for each day. <br />
-Make the console text a different COLOR for each day. NOT background color, make the text letter color different. <br />
-    "Monday: 20 Sit ups"            (red text) <br />
-    "Tuesday: 15 jumping jacks"     (blue text) <br />
-    "Wednesday: 20 press ups"       (green text) <br />
-    "Thursday: 10 burpees"          (yellow text) <br />
-    ...
-Colorama documentation - https://pypi.org/project/colorama/ <br />
-Colorama github - https://github.com/tartley/colorama     (just for documentation, you do not need to install) <br />
-Remember to convert the user's input to lowercase before comparison. <br />
-Have a "default case" should the user not enter a weekday. <br />
+### A - Knock, Knock
+Write a knock, knock joke using while loops <br />
+"Knock, Knock!: " <br />
+"who's there?" <br />
+"Phil.... :" <br />
+"phil who?" <br />
+"Phil Deez Nuts!" <br />
+The user should be continually prompted until they enter "who's there" or "who is there?" and "phil who?" <br />
+If the user enters the wrong reply 2 times, tell them to write "who is there?" or "phil who?" <br />
 
 
-### B - Color me in
-Re-write the above example program to use a SWITCH statement <br />
-Use the unicode colors Cyan, Yellow and Magenta instead of red, blue and green. <br />
-You might get confused with how to add "or" into the switch statement. Clue, it isn't "or". <br />
-You should not need the null check for the switch as the default case should catch it. <br />
+### Puzzle B - While there's maths
+Write a program that asks the user for a number between 1 and 10, then display the number to the power of 2,3,4 and 5. <br />
+"Enter a number: "   2 <br />
+"2 to the power of 2 is 4" <br />
+"2 to the power of 3 is 8" <br />
+... <br />
+Continually prompt the user to enter a number between 1 and 10. <br />
+Think of how this would be done in an IF statement, then just do it in a while loop - while(if statement expression) <br />
+Use Math.Pow() to do the power calculation. <br />
+Math.Pow() accepts DOUBLES not ints. <br />
 
 
-### C - Maths Switch
-Write a program using a switch statement, that allows the user to enter 2 numbers and choose the operator + - * / <br />
-So the user could enter "2" then "*" then "7" in 3 separate input prompts. <br />
-They will get the answer "2 * 7 = 14" <br />
+### C - Contagious Laughter
+Write a program that maniacally laughs at the user, as long as the user keeps laughing. <br />
+The program will say "Ha ha ha ha ha... " and if the user enters a string that contains "ha" the program will laugh again. <br />
+Hint: Look up "Contains()" <br />
+After laughing 3 times, the program should display "Ha ha???..." and if the user enters a string containing "ha" then keep laughing! <br />
+Use a keepLaughing boolean value to continually re-run a while loop. <br />
 
 
 # Good Luck!

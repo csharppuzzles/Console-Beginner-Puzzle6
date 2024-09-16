@@ -26,7 +26,6 @@ static void ExampleA()
     }
 
     Console.WriteLine($"Thanks for entering 'apple' after {counter} tries");
-
 }
 
 
@@ -44,6 +43,55 @@ static void PuzzleA()
     Console.WriteLine("\nPuzzle A");
     Console.WriteLine("~~~~~~~~~");
 
+    int counter = 0;
+    while (true)
+    {
+        Console.WriteLine("Knock, Knock!");
+        string? input = Console.ReadLine();
+
+
+        if (input.ToLower() == "who's there?" || input.ToLower() == "who is there?")
+        {
+            // End the while loop
+            break;
+        }
+        else
+        {
+            counter++;
+            if (counter > 1)
+            {
+                // This will work on the second attempt
+                Console.WriteLine("Just type 'who is there?'....");
+            }
+        }
+    }
+
+    // You could just reset counter back to 0...
+    // counter = 0;
+    int whoCounter = 0;
+    while (true)
+    {
+        Console.WriteLine("Phil.... : ");
+
+        string? input = Console.ReadLine();
+
+
+        if (input.ToLower() == "phil who?")
+        {
+            // End the while loop
+            break;
+        }
+         else
+        {
+            whoCounter++;
+            if (whoCounter > 1)
+            {
+                Console.WriteLine("Just type 'phil who?'....");
+            }
+        }
+    }
+
+    Console.WriteLine("Phil Deez Nuts!");
 }
 
 
@@ -74,7 +122,6 @@ static void ExampleB()
     }
 
     Console.WriteLine($"The total was: {total}");
-
 }
 
 
@@ -95,6 +142,23 @@ static void PuzzleB()
     Console.WriteLine("~~~~~~~~~");
 
 
+    Console.WriteLine("Enter a number between 1 and 10: ");
+    double input = Convert.ToDouble(Console.ReadLine());
+
+    while(input < 0 || input > 10)
+    {
+        Console.WriteLine("Sorry, it has to be between 1 and 10: ");
+        input = Convert.ToDouble(Console.ReadLine());
+    }
+
+    double i = 2;
+    while(i <= 5)
+    {
+        double ans1 = Math.Pow(i, input);
+        Console.WriteLine($"{input} to the power of {i} is {ans1}");
+
+        i++;
+    }
 }
 
 
@@ -129,7 +193,6 @@ static void ExampleC()
             Console.WriteLine("This still runs as there is no break statement.");
         }
     }
-    
 }
 
 
@@ -145,7 +208,33 @@ static void PuzzleC()
     Console.WriteLine("\nPuzzle C");
     Console.WriteLine("~~~~~~~~~");
 
-   
+    bool keepLaughing = true;
+    int counter = 0;
+
+    while(keepLaughing)
+    {
+        if (counter < 3)
+        {
+            Console.WriteLine("Ha ha ha ha ha... ");
+            counter++;
+        }
+        else
+        {
+            Console.WriteLine("Ha ha???...");
+            counter = 0;
+        }
+
+        string? input = Console.ReadLine();
+
+        bool containsHa = input.ToLower().Contains("ha");
+
+        if (containsHa == false)
+        {
+            keepLaughing = false;
+            counter = 0;
+            Console.WriteLine("Ahhh... it's good to laugh!");
+        }
+    }
 }
 
 
